@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeevan Ankur Trust - Achievements</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        img {
+    margin: 0;
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        background-size: contain;
+        background-position: top center; 
+    }
+
+    img {
+        width: 15vw; 
+        height: 15vw;
+        min-width: 3rem;
+        min-height: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: auto 100%; 
+        background-position: center;
+
+    }
+   
+
+    img {
+        width: 20vw;
+        height: 20vw;
+        min-width: 2.5rem;
+        min-height: 2.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    img {
+        width: 6rem; 
+        height: 6rem;
+    }
+}
+    </style>
+    <style>
+        nav
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        img
+        {
+            height: 100%;
+        }
+        a
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 45px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="image.png" alt="">
+        <div class="logo">Jeevan Ankur Trust</div>
+        <nav>
+            <a href="categories.html" class="nav-link btn">Add</a>
+            <button class="nav-link btn" onclick="showDetailModal()">Detail</button>
+            <a href="index.html" class="nav-link " onclick="logout()">Logout</a>
+        </nav>
+        
+    </header>
+
+    <!-- Achievements Section -->
+    <section class="achievements">
+        <h2>Our Achievements</h2>
+        <div style="display: flex;" class="achievement-cards">
+            <div class="card">
+                <img style="height: 100%;" src="image copy 2.png" alt="Achievement 1">
+                
+            </div>
+            <div class="card">
+                <img style="height: 100%;"  src="image copy 3.png" alt="Achievement 2">
+               
+            </div>
+            <div class="card">
+                <img style="height: 100%;"  src="image copy 4.png" alt="Achievement 3">
+                
+            </div>
+            <div class="card">
+                    <video controls style="border-radius: 20px;"  width="250" src="AQPEzeHrHfegjoWbhr6sjVc2qfv9YMjhdUceuyjjGw_-3YEQxcgUqRQOjbg821iA3lb9yF1XWGOMUHkND1zmbJ1ujz1GIUwia-IWr-U.mp4"></video>                
+            </div>
+            <div class="card">
+                    <video controls style="border-radius: 20px;" width="250" src="AQPaCCTO3Zpmbay2rdHgHbJM1OkSFXdtYxWfSfhbrr_DMFJ_8VjoLcOeouOOpzSxFi0enRkaHYlyrUM7m_zvImlBpVtABphpAZpNLc8.mp4"></video>                
+            </div>
+            <div class="card">
+                <video controls style="border-radius: 20px;" width="250" src="AQMzPcptm7Oi6G6n0nvQNcEj45SWd7hmBrzhm6tZhyUmSJ3KLe7Mv7nsr9rvVqGZ3aazoKjbG3rEr0kEzAzJtS89.mp4"></video>                
+                
+            </div>
+            <div class="card">
+                <img style="height: 100%;" src="image copy 6.png" alt="Achievement 1">
+                
+            </div>
+            <div class="card">
+                <img style="height: 100%;" src="image copy 7.png" alt="Achievement 1">
+                
+            </div>
+            <div class="card">
+                <img style="height: 100%;" src="image copy 8.png" alt="Achievement 1">
+                
+            </div>
+            <div class="card">
+                <video controls style="border-radius: 20px;" width="250" src="AQObJp3NWkv7HcYtRPNYNlfpx9irjBAfPYBWXBM1TUbvABkBz8dhHVRkhaRp4E7S8HtE37tjybRvKHPjpyr55FlmerhxDzvBwDzfwzQ.mp4"></video>                
+                
+            </div>
+            <div class="card">
+                <video controls style="border-radius: 20px;" width="250" src="AQMPN6W41dfi7QumQRJ0qNJPmf7oUHsZiqwSQSAqXfpgxwUf7_RdBasnCYXfpOoYbQyekmUH4eQs_EmoU4dPIg2hNYQijIXUyDTbpXI.mp4"></video>                
+                
+            </div>
+            <div class="card">
+                <img style="height: 100%;" src="image copy.png" alt="Achievement 1">
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Detail Modal -->
+    <div id="detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetailModal()">×</span>
+            <h2>Search Person Details</h2>
+            <form id="detail-search-form">
+                <label for="search-name">Enter Name</label>
+                <input type="text" id="search-name" placeholder="Enter person name" required>
+                <button type="submit" class="btn">Search</button>
+            </form>
+            <div id="detail-result" style="display: none; margin-top: 20px;"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

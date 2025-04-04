@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeevan Ankur Trust - Login/Sign Up</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+    background-image: url(image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; 
+    margin: 0;
+    height: 100vh;
+}
+
+img {
+    margin: 0;
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        background-size: contain;
+        background-position: top center; 
+    }
+
+    img {
+        width: 15vw; 
+        height: 15vw;
+        min-width: 3rem;
+        min-height: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: auto 100%; 
+        background-position: center;
+
+    }
+   
+
+    img {
+        width: 20vw;
+        height: 20vw;
+        min-width: 2.5rem;
+        min-height: 2.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    img {
+        width: 6rem; 
+        height: 6rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="image.png" alt="">
+        <div class="logo">Jeevan Ankur Trust</div>
+    </header>
+
+    <!-- Login/Signup Section -->
+    <section class="auth-section">
+        
+
+        <!-- Login Form -->
+        <div id="login" class="form-container active">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="email">Email or Username</label>
+                <input type="text" id="email" placeholder="Enter email or username" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password" required>
+                <button type="submit" class="btn">Login</button>
+                <a href="#" class="forgot-password" onclick="showForgotPasswordModal()">Forgot Password?</a>
+            </form>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div id="signup" class="form-container">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" placeholder="Enter email" required>
+                <label for="signup-username">Username</label>
+                <input type="text" id="signup-username" placeholder="Enter username" required>
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" placeholder="Enter password" required>
+                <button type="submit"  class="btn">Sign Up</button>
+            </form>
+        </div>
+        <div style="margin: 10px;" class="tabs">
+            <button class="tab active" onclick="showTab('login')">Login</button>
+            <button class="tab" onclick="showTab('signup')">Sign Up</button>
+        </div>
+    </section>
+
+    <!-- Forgot Password Modal -->
+    <div id="forgot-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeForgotPasswordModal()">&times;</span>
+            <h2>Forgot Password</h2>
+            <div id="forgot-password-step-1">
+                <p>Enter your email address to receive a password reset link.</p>
+                <form id="forgot-password-form">
+                    <label for="forgot-email">Email</label>
+                    <input type="email" id="forgot-email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn">Send Reset Link</button>
+                </form>
+            </div>
+            <div id="forgot-password-step-2" style="display: none;">
+                <p>A reset link has been sent to your email. For this demo, please enter your new password below.</p>
+                <form id="reset-password-form">
+                    <label for="new-password">New Password</label>
+                    <input type="password" id="new-password" placeholder="Enter new password" required>
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm new password" required>
+                    <button type="submit" class="btn">Reset Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeevan Ankur Trust - Form</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        img {
+    margin: 0;
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        background-size: contain;
+        background-position: top center; 
+    }
+
+    img {
+        width: 15vw; 
+        height: 15vw;
+        min-width: 3rem;
+        min-height: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: auto 100%; 
+        background-position: center;
+
+    }
+   
+
+    img {
+        width: 20vw;
+        height: 20vw;
+        min-width: 2.5rem;
+        min-height: 2.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    img {
+        width: 6rem; 
+        height: 6rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+
+        <div class="logo">Jeevan Ankur Trust</div>
+        <nav>
+            <a href="categories.html" class="nav-link">Back</a>
+        </nav>
+    </header>
+
+    <!-- Form Section -->
+    <section id="form" class="form-section">
+        <h2 id="form-title">Common Form</h2>
+        <form id="common-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter name" required>
+            <label for="age">Age</label>
+            <input type="number" id="age" placeholder="Enter age" required>
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" required>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter phone number" required>
+            <label for="address">Address</label>
+            <textarea id="address" placeholder="Enter address" required></textarea>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
