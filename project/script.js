@@ -50,11 +50,26 @@ document.getElementById('detail-search-form')?.addEventListener('submit', functi
         detailsHtml += `<p><strong>Category:</strong> ${person.category}</p>`;
         switch (person.category) {
             case 'Student':
-                detailsHtml += `
-                    <p><strong>Age:</strong> ${person.age}</p>
-                    <p><strong>Date of Birth:</strong> ${person.dob}</p>
-                    <p><strong>School Name:</strong> ${person.school}</p>
-                    <p><strong>Grade:</strong> ${person.grade}</p>
+                
+            detailsHtml += `
+              <p><strong>Age:</strong> ${person.age || 'N/A'}</p>
+                        <p><strong>Date of Birth:</strong> ${person.dob || 'N/A'}</p>
+                        <p><strong>School Name:</strong> ${person.school || 'N/A'}</p>
+                        <p><strong>Grade:</strong> ${person.grade || 'N/A'}</p>
+                        <p><strong>Mother Name:</strong> ${person.motherName || 'N/A'}</p>
+                        <p><strong>Mother Occupation:</strong> ${person.motherOccupation || 'N/A'}</p>
+                        <p><strong>Father Name:</strong> ${person.fatherName || 'N/A'}</p>
+                        <p><strong>Father Occupation:</strong> ${person.fatherOccupation || 'N/A'}</p>
+                        <p><strong>Caste:</strong> ${person.cast || 'N/A'}</p>
+                        <p><strong>Mother Tongue:</strong> ${person.motherTongue || 'N/A'}</p>
+                        <p><strong>Village:</strong> ${person.village || 'N/A'}</p>
+                        <p><strong>Student Dream:</strong> ${person.studentDream || 'N/A'}</p>
+                        <p><strong>Aadhar Card:</strong> ${person.aadharCard || 'N/A'}</p>
+                        <p><strong>Birth Certificate:</strong> ${person.birthCertificate || 'N/A'}</p>
+                        <p><strong>Mother Phone No:</strong> ${person.motherPhoneNo || 'N/A'}</p>
+                        <p><strong>Father Phone No:</strong> ${person.fatherPhoneNo || 'N/A'}</p>
+                        <p><strong>Teacher Name:</strong> ${person.teacherName || 'N/A'}</p>
+                        <p><strong>Center Incharge:</strong> ${person.centerIncharge || 'N/A'}</p>
                 `;
                 break;
             case 'Women Empowerment':
@@ -173,11 +188,28 @@ if (window.location.pathname.includes('achievements.html')) {
 const formHandlers = {
     'student-form': function() {
         const name = document.getElementById('student-name').value;
-        const age = document.getElementById('student-age').value;
-        const dob = document.getElementById('student-dob').value;
-        const school = document.getElementById('student-school').value;
-        const grade = document.getElementById('student-grade').value;
-        return { name, age, dob, school, grade, category: 'Student' };
+            const age = document.getElementById('student-age').value;
+            const dob = document.getElementById('student-dob').value;
+            const school = document.getElementById('student-school').value;
+            const motherName = document.getElementById('mother-name').value;
+            const motherOccupation = document.getElementById('mother-occupation').value;
+            const fatherName = document.getElementById('father-name').value;
+            const fatherOccupation = document.getElementById('father-occupation').value;
+            const cast = document.getElementById('cast').value;
+            const motherTongue = document.getElementById('mother-tongue').value;
+            const village = document.getElementById('village').value;
+            const studentDream = document.getElementById('student-dream').value;
+            const aadharCard = document.getElementById('addhar-card').files[0]?.name || 'Not uploaded';
+            const birthCertificate = document.getElementById('birth-certificate').files[0]?.name || 'Not uploaded';
+            const motherPhoneNo = document.getElementById('mother-phone-no').value;
+            const fatherPhoneNo = document.getElementById('father-phone-no').value;
+            const teacherName = document.getElementById('teacher-name').value;
+            const centerIncharge = document.getElementById('center-incharge').value;
+            return {
+                name, age, dob, school, motherName, motherOccupation, fatherName, fatherOccupation,
+                cast, motherTongue, village, studentDream, aadharCard, birthCertificate, motherPhoneNo,
+                fatherPhoneNo, teacherName, centerIncharge, category: 'Student'
+            };
     },
     'women-empowerment-form': function() {
         const name = document.getElementById('women-name').value;
